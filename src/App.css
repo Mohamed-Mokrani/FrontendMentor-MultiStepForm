@@ -1,0 +1,488 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: "Ubuntu", sans-serif;
+  background-color: hsl(217, 100%, 97%);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.bg_sideba_desktop {
+  display: none;
+}
+.bg_sideba_mobile {
+  width: 100%;
+}
+.bg_sideba_mobile img {
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding-top: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.steps_nums {
+  width: fit-content;
+  height: 5vh;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  font-size: 1.4em;
+  gap: 1em;
+}
+.steps_nums li a {
+  color: hsl(231, 100%, 99%);
+  border: 1px solid hsl(231, 100%, 99%);
+  padding: 0.2em 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+}
+.steps_num_index{
+  background-color: hsl(206, 94%, 87%);
+  color: hsl(213, 96%, 18%) !important;
+  border-color: transparent;
+}
+
+.top_cont {
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+}
+.step {
+  width: 90%;
+  margin: 0 auto;
+  background-color: hsl(231, 100%, 99%);
+  padding: 2em 1.5em;
+  border-radius: 1em;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.112);
+}
+.step > h1 {
+  color: hsl(213, 96%, 18%);
+  font-size: 1.6em;
+}
+.step > p {
+  color: hsl(231, 11%, 63%);
+  line-height: 1.6;
+  font-size: 1em;
+  margin-top: 0.4em;
+}
+.step1 form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.step1 form div {
+  display: flex;
+  flex-direction: column;
+}
+.step1 form label {
+  color: hsl(213, 96%, 18%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.step1 form label span{
+  color: hsl(354, 84%, 57%);
+  font-weight: 700;
+  font-size: .9em;
+}
+.step1 form input {
+  font-size: 1em;
+  padding: 0.9em;
+  font-weight: 500;
+  border-radius: .5em;
+  border:1px solid hsl(229, 24%, 87%);
+  outline: none;
+}
+.step1 form input::placeholder {
+  font-weight: bold;
+  color: hsla(231, 11%, 63%, 0.827);
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.next_back {
+  background-color: hsl(231, 100%, 99%);
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.next_back button {
+  font-size: 1em;
+  padding: 0.8em 1em;
+  border: none;
+  outline: none;
+  border-radius: 0.4em;
+  cursor: pointer;
+}
+.next {
+  background-color: hsl(213, 96%, 18%);
+  color: hsl(231, 100%, 99%);
+}
+.confirm{
+  background-color: hsl(243, 100%, 62%) !important;
+}
+.confirm:hover{
+  background-color: hsl(228, 100%, 84%) !important;
+}
+.next:hover {
+  background-color: hsl(213, 96%, 30%);
+}
+.back {
+  background-color: transparent;
+  color: hsl(231, 11%, 63%);
+}
+.back:hover {
+  color: hsl(213, 96%, 18%);
+}
+
+@media (min-width: 635px) {
+  .App {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .home {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: hsl(231, 100%, 99%);
+    border-radius: 1em;
+  }
+  .bg_sideba_mobile {
+    display: none;
+  }
+  .container {
+    width: 60%;
+  }
+  .step {
+    box-shadow: none;
+  }
+  .bg_sideba_desktop {
+    display: block;
+    background-image: url("./images/bg-sidebar-desktop.svg");
+    background-size: cover;
+    width: 30%;
+    height: 100%;
+    padding: 3em 2em;
+    border-radius: 1em;
+  }
+
+  .steps_mobile {
+    display: none;
+  }
+  .steps_nums {
+    flex-direction: column;
+    gap: 2em;
+    margin: 0;
+  }
+  .steps_desktop li {
+    display: flex;
+    align-items: center;
+    gap: 0.8em;
+  }
+  .steps_desktop h6 {
+    color: hsl(228, 100%, 84%);
+    font-weight: 400;
+  }
+  .steps_desktop h5 {
+    font-size: 0.8em;
+    color: hsl(231, 100%, 99%);
+  }
+}
+@media (min-width: 635px) and (max-width: 1100px) {
+  .home {
+    width: 95%;
+  }
+}
+
+/* *******************************-Step 2-***************************** */
+/* ------Toggle button (w3schools)------ */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 23px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: hsl(213, 96%, 18%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4.5px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: hsl(213, 96%, 18%);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px hsl(213, 96%, 18%);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* ------End Toggle button------ */
+
+.plans {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  padding: 0;
+}
+.plan {
+  border: 1px solid hsl(229, 24%, 87%);
+  border-radius: 0.5em;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9em;
+  padding: 0.9em 1em;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.plan:hover{
+  border-color: hsl(213, 96%, 18%);
+}
+.selected_plan{
+  background-color: hsl(217, 100%, 97%);
+  border-color: hsl(213, 96%, 18%) !important;
+  line-height: 1.4 !important
+}
+.plan h4 {
+  color: hsl(213, 96%, 18%);
+}
+.plan h5 {
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+}
+.plan h5:last-child {
+  color: hsl(213, 96%, 18%);
+}
+
+.monthly_yearly {
+  background-color: hsl(217, 100%, 97%);
+  width: 100%;
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-evenly;
+  font-weight: 400;
+  padding: 0.7em 0;
+  border-radius: 0.5em;
+  color: hsl(213, 96%, 18%);
+}
+
+@media (min-width: 635px) {
+  .plans {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 65%;
+  }
+  .plan {
+    width: 30%;
+    gap: 0;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+}
+
+/* ****************************-Step 3-************************************ */
+
+.add_ons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.add_on {
+  width: 100%;
+  border: 1px solid hsl(213, 96%, 18%);
+  border-radius: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7em;
+}
+
+.add_on div {
+  width: 70%;
+}
+
+.add_on input {
+  margin: 0;
+  width: 1.5em;
+  height: 1.5em;
+  accent-color: hsl(243, 100%, 62%);
+  cursor: pointer;
+}
+
+.add_on p {
+  margin: 0;
+  font-size: 0.9em;
+  color: hsl(243, 100%, 62%);
+}
+.add_on div p {
+  color: hsl(231, 11%, 63%);
+}
+
+@media (min-width: 635px) {
+  .add_on {
+    padding: 1.5em;
+  }
+}
+
+/* ****************************-End Step 3-************************************ */
+
+/* ****************************- Step 4-************************************ */
+.prices {
+  background-color: hsl(217, 100%, 97%);
+  padding: 1.4em 1em;
+  line-height: 1.8;
+  border-radius: 0.5em;
+}
+.selected_plan {
+  line-height: 1.3;
+}
+.selected_plan h4 {
+  color: hsl(213, 96%, 18%) !important;
+  font-weight: 700 !important;
+}
+#plan_prix {
+  font-weight: 700 !important;
+  color: hsl(213, 96%, 18%);
+}
+.selected_plan button {
+  background: transparent;
+  border: none;
+  outline: none;
+  text-decoration: underline;
+  padding: 0;
+  font-size: 1em;
+  color: hsl(231, 11%, 63%);
+  cursor: pointer;
+}
+.selected_plan button:hover{
+  color: hsl(243, 100%, 62%);
+}
+.name_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.name_price h4 {
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+}
+.prix {
+  color: hsl(213, 96%, 18%) !important;
+}
+.total {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+.total h4 {
+  font-weight: 400;
+  color: hsl(231, 11%, 63%);
+}
+.total h3 {
+  color: hsl(243, 100%, 62%);
+}
+@media (min-width: 635px) {
+  .prices {
+    line-height: 3;
+  }
+}
+
+/* ****************************-End Step 4-************************************ */
+
+.thanks {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  padding: 5em 1em;
+}
+.thanks img {
+  width: 3em;
+}
+.thanks p {
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
+}
